@@ -8,8 +8,8 @@ $(document).ready(function(){
     event.preventDefault();
 
 
-    var result = "placeHolder";
-    $("#codeResult").text(result);
+    var result = $("#numberInput").val();
+    $("#pingPongResult").append("<li>"+result+"</li");
 
   });
 
