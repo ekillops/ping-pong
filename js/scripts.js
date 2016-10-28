@@ -83,16 +83,18 @@ var displayResults = function(resultArray) {
 
   var displayCurrentItem = function() {
     if (i < resultArray.length) {
+      $("#counter, #ping, #pong, #pingPong").empty();
+
       if (parseInt(resultArray[i])) {
-        $("#counterResult").text(resultArray[i]);
+        $("#counter").text(resultArray[i]);
       } else if (resultArray[i] === "Ping!") {
-        $("#pingResult").text(resultArray[i]);
+        $("#ping").text(resultArray[i]);
       } else if (resultArray[i] === "Pong!") {
-        $("#pongResult").text(resultArray[i]);
+        $("#pong").text(resultArray[i]);
       } else if (resultArray[i] === "Ping-Pong!") {
-        $("#pingPongResult").text(resultArray[i]);
+        $("#pingPong").text(resultArray[i]);
       } else {
-        $("#counterResult").text(resultArray[i]);
+        $("#counter").text(resultArray[i]);
       }
 
       i += 1;
@@ -126,7 +128,8 @@ $(document).ready(function(){
   });
 
   $("#clear").click(function(){
-    $("#pingPongResult").empty();
+
+    $("#counter, #ping, #pong, #pingPong").empty();
   });
 
 });

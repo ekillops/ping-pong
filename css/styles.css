@@ -1,19 +1,12 @@
-#counterResult {
-  background-color: green;
-  color: white;
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: lightgreen;
 }
 
-#pingResult {
-  background-color: blue;
-  color: white;
+body p {
+  font-size: 20px;
 }
 
-#pongResult {
-  background-color: red;
-  color: white;
-}
-
-#pingPongResult {
-  background-color: purple;
-  color: white;
+.result {
+  font-size: 30px;
 }

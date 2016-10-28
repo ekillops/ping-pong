@@ -7,10 +7,11 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <title>Ping-Pong</title>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <div class="text-center">
       <h1>Ping-Pong Game</h1>
     </div>
@@ -24,14 +25,23 @@
       <button type="submit" form="inputBox" class="btn" id="play">Play!</button>
       <button class="btn" id="clear">Clear Results</button>
     </div>
-      <div id="counterResult">
+    <div class="col-md-4">
+      <img src="img/ping-sam.png" alt="8 Bit Samwise" />
+      <div id="ping" class="result text-center">
       </div>
-      <div id="pingResult">
+    </div>
+    <div class="col-md-4">
+      <p class="result text-center">Counter:</p>
+      <div id="counter" class="result text-center">
       </div>
-      <div id="pongResult">
+      <div id="pingPong" class="result text-center">
       </div>
-      <div id="pingPongResult">
+    </div>
+    <div class="col-md-4">
+      <img src="img/ping-frodo.png" alt="8 Bit Frodo" />
+      <div id="pong" class="result text-center">
       </div>
+    </div>
   </div>
 </body>
 
