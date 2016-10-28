@@ -22,6 +22,7 @@ $(document).ready(function(){
 
     var userNumberInput = $("#numberInput").val();
     var result = checkInput(userNumberInput);
+    $("#pingPongResult").empty();
     $("#pingPongResult").append("<li>"+result+"</li");
 
   });
