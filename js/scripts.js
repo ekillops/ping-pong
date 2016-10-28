@@ -64,46 +64,41 @@ var mainProgram = function(input) {
 
 var displayResults = function(resultArray) {
   // (array, string) -> undefined
-  var i = 0;
-  var currentResult = resultArray[i];
-  // Empty output list
-  // $(outputIdString).empty();
 
-//   var displayCurrentItem = function() {
-//     if (i < resultArray.length) {
-//       $(outputIdString).append("<li>"+resultArray[i]+"</li>");
-//       i += 1;
-//     } else {
-//       window.clearInterval(displayId);
-//     }
-//   };
-//   // Append a new list item in outputList for each item in resultArray
-//   var displayId = window.setInterval(displayCurrentItem, 500);
-//
+  // Counter for window.setInterval below
+  var i = 0;
 
   var displayCurrentItem = function() {
+  // Acts as a pseudo-loop, texting items
+
     if (i < resultArray.length) {
+      // Condition for window.setInterval below
+
+
+      // Clear results before displaying a new result
       $("#counter, #ping, #pong, #pingPong").empty();
 
-      if (parseInt(resultArray[i])) {
-        $("#counter").text(resultArray[i]);
-      } else if (resultArray[i] === "Ping!") {
-        $("#ping").text(resultArray[i]);
-      } else if (resultArray[i] === "Pong!") {
-        $("#pong").text(resultArray[i]);
-      } else if (resultArray[i] === "Ping-Pong!") {
-        $("#pingPong").text(resultArray[i]);
-      } else {
-        $("#counter").text(resultArray[i]);
-      }
-
-      i += 1;
+        // Texts results to corresponding divs
+        if (parseInt(resultArray[i])) {
+          $("#counter").text(resultArray[i]);
+        } else if (resultArray[i] === "Ping!") {
+          $("#ping").text(resultArray[i]);
+        } else if (resultArray[i] === "Pong!") {
+          $("#pong").text(resultArray[i]);
+        } else if (resultArray[i] === "Ping-Pong!") {
+          $("#pingPong").text(resultArray[i]);
+        } else {
+          $("#counter").text(resultArray[i]);
+        }
+        // Incrementer for window.setInterval
+        i += 1;
     } else {
+      // When out of items cancel interval timer
       window.clearInterval(displayId);
     }
   };
-  // Append a new list item in outputList for each item in resultArray
-  var displayId = window.setInterval(displayCurrentItem, 500);
+  // Call displayCurrentItem every 600 ms until out of items
+  var displayId = window.setInterval(displayCurrentItem, 600);
 
 };
 
@@ -114,8 +109,6 @@ $(document).ready(function(){
 
   $("#inputBox").submit(function(event){
     event.preventDefault();
-    // Define output target
-    // var outputList = "#pingPongResult";
 
     // Take user number in
     var userNumberInput = $("#numberInput").val();
@@ -128,7 +121,7 @@ $(document).ready(function(){
   });
 
   $("#clear").click(function(){
-
+    // Clear results on button click
     $("#counter, #ping, #pong, #pingPong").empty();
   });
 

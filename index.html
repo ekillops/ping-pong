@@ -11,34 +11,35 @@
     <title>Ping-Pong</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="text-center">
       <h1>Ping-Pong Game</h1>
+      <br>
+      <p>Enter a number, press play and the counter will begin counting up. Numbers divisible by 3 will be become Ping, numbers divisible by 5 will become Pong, and number divisible by 15 will become Ping-Pong. What fun!</p>
     </div>
     <div class="row">
       <form id="inputBox">
           <div class="form-group">
-              <label for="numberInput">Please enter a number:</label>
-              <input id="numberInput" class="form-control" type="text" placeholder="Enter your number">
+              <input id="numberInput" class="form-control" type="text" placeholder="Enter your number here!">
           </div>
       </form>
       <button type="submit" form="inputBox" class="btn" id="play">Play!</button>
       <button class="btn" id="clear">Clear Results</button>
     </div>
-    <div class="col-md-4">
-      <img src="img/ping-sam.png" alt="8 Bit Samwise" />
+    <div class="col-md-4 col-s-4 col-xs-4">
+      <img class="character img-responsive"src="img/ping-sam.png" alt="8 Bit Samwise" />
       <div id="ping" class="result text-center">
       </div>
     </div>
-    <div class="col-md-4">
-      <p class="result text-center">Counter:</p>
+    <div class="col-md-4 col-s-4 col-xs-4">
+      <p class="result text-center text-underline"><u>Counter:</u></p>
       <div id="counter" class="result text-center">
       </div>
       <div id="pingPong" class="result text-center">
       </div>
     </div>
-    <div class="col-md-4">
-      <img src="img/ping-frodo.png" alt="8 Bit Frodo" />
+    <div class="col-md-4 col-s-4 col-xs-4">
+      <img class="character img-responsive" src="img/ping-frodo.png" alt="8 Bit Frodo" />
       <div id="pong" class="result text-center">
       </div>
     </div>

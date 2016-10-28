@@ -1,10 +1,28 @@
-body {
+
+html, body {
   font-family: 'Press Start 2P', cursive;
-  background-color: lightgreen;
+  background: url("../img/ping-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  padding: 20px;
 }
 
 body p {
-  font-size: 20px;
+  font-size: 15px;
+}
+
+button {
+  background-color: green;
+}
+
+.character {
+  vertical-align: middle;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
 }
 
 .result {
