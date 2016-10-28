@@ -78,10 +78,8 @@ var displayResults = function(resultArray, outputIdString) {
 
 $(document).ready(function(){
 
-
   $("#inputBox").submit(function(event){
     event.preventDefault();
-
     // Define output target
     var outputList = "#pingPongResult";
 
@@ -93,6 +91,10 @@ $(document).ready(function(){
 
     // Clear outputList and append with pingpong results
     displayResults(results, outputList);
+  });
+
+  $("#clear").click(function(){
+    $("#pingPongResult").empty();
   });
 
 });
