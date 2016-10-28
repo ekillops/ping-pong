@@ -62,17 +62,49 @@ var mainProgram = function(input) {
 
 /* Front End */
 
-var displayResults = function(resultArray, outputIdString) {
+var displayResults = function(resultArray) {
   // (array, string) -> undefined
-
+  var i = 0;
+  var currentResult = resultArray[i];
   // Empty output list
-  $(outputIdString).empty();
+  // $(outputIdString).empty();
 
+//   var displayCurrentItem = function() {
+//     if (i < resultArray.length) {
+//       $(outputIdString).append("<li>"+resultArray[i]+"</li>");
+//       i += 1;
+//     } else {
+//       window.clearInterval(displayId);
+//     }
+//   };
+//   // Append a new list item in outputList for each item in resultArray
+//   var displayId = window.setInterval(displayCurrentItem, 500);
+//
+
+  var displayCurrentItem = function() {
+    if (i < resultArray.length) {
+      if (parseInt(resultArray[i])) {
+        $("#counterResult").text(resultArray[i]);
+      } else if (resultArray[i] === "Ping!") {
+        $("#pingResult").text(resultArray[i]);
+      } else if (resultArray[i] === "Pong!") {
+        $("#pongResult").text(resultArray[i]);
+      } else if (resultArray[i] === "Ping-Pong!") {
+        $("#pingPongResult").text(resultArray[i]);
+      } else {
+        $("#counterResult").text(resultArray[i]);
+      }
+
+      i += 1;
+    } else {
+      window.clearInterval(displayId);
+    }
+  };
   // Append a new list item in outputList for each item in resultArray
-  resultArray.forEach(function(arrayItem) {
-  $(outputIdString).append("<li>"+arrayItem+"</li>");
-  });
+  var displayId = window.setInterval(displayCurrentItem, 500);
+
 };
+
 
 
 
@@ -81,7 +113,7 @@ $(document).ready(function(){
   $("#inputBox").submit(function(event){
     event.preventDefault();
     // Define output target
-    var outputList = "#pingPongResult";
+    // var outputList = "#pingPongResult";
 
     // Take user number in
     var userNumberInput = $("#numberInput").val();
@@ -90,7 +122,7 @@ $(document).ready(function(){
     var results = mainProgram(userNumberInput);
 
     // Clear outputList and append with pingpong results
-    displayResults(results, outputList);
+    displayResults(results);
   });
 
   $("#clear").click(function(){

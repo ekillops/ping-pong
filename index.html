@@ -9,22 +9,30 @@
     <script src="js/scripts.js"></script>
     <title>Ping-Pong</title>
 </head>
-
 <body>
-    <div class="container-fluid">
-    <form id="inputBox">
-        <div class="form-group">
-            <label for="numberInput">Please enter a number:</label>
-            <input id="numberInput" class="form-control" type="text" placeholder="Enter your number">
-        </div>
-        <button type="submit" form="inputBox" class="btn" id="play">Play!</button>
-    </form>
-      <button class="btn" id="clear">Clear Results</button>
-    <div id="pingPongResult">
-      <ul></ul>
+  <div class="container-fluid">
+    <div class="text-center">
+      <h1>Ping-Pong Game</h1>
     </div>
+    <div class="row">
+      <form id="inputBox">
+          <div class="form-group">
+              <label for="numberInput">Please enter a number:</label>
+              <input id="numberInput" class="form-control" type="text" placeholder="Enter your number">
+          </div>
+      </form>
+      <button type="submit" form="inputBox" class="btn" id="play">Play!</button>
+      <button class="btn" id="clear">Clear Results</button>
+    </div>
+      <div id="counterResult">
+      </div>
+      <div id="pingResult">
+      </div>
+      <div id="pongResult">
+      </div>
+      <div id="pingPongResult">
+      </div>
   </div>
-
 </body>
 
 </html>
