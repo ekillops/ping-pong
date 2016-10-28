@@ -10,9 +10,9 @@ _This website will take a user input number, output numbers 1 through the target
 
 _Specs:_
 
-<!-- * _Take user input and output number in a list (input= 5 ouput= 5)_
+* _Take user input and output number in a list (input= 5 ouput= 5)_
 * _Print message for invalid inputs (input= 'hi' ouput= 'invalid input')_
-* _Clear list to allow user to play again without refreshing_ -->
+* _Clear list to allow user to play again without refreshing_
 * _Generate a range of numbers up to and including the target number (input= 5 ouput= 1, 2, 3, 4, 5)_
 * _Replace numbers divisible by 3 with 'ping' (input= 5 ouput= 1, 2, Ping, 4, 5)_
 * _Replace numbers divisible by '5' with 'pong' (input= 5 ouput= 1, 2, Ping, 4, Pong)_
